@@ -22,5 +22,18 @@ function adminLoginCheck() {
     function goToAdminLogin() {
     window.location.href = "admin-login.html";
 }
+function teacherLoginCheck() {
+    let username = document.getElementById("teacherUser").value;
+    let password = document.getElementById("teacherPass").value;
+
+    // Demo Teacher credentials
+    if (username === "teacher" && password === "teacher123") {
+        window.location.href = "teacher-dashboard.html";
+    } else {
+        document.getElementById("teacherError").innerText =
+            "Invalid Teacher Credentials!";
+    }
+}
+
 
 }
